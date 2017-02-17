@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    >
+
+
+    <TextView
+        android:id="@+id/textoinformacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/textoinformativo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+         />
+
+    <RadioGroup
+        android:id="@+id/radiosOperaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linea"
+        android:layout_below="@+id/textoinformacion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        >
+
+        <RadioButton
+            android:text="@string/suma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioSuma"
+            android:checked="false"/>
+
+        <RadioButton
+            android:text="@string/resta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioResta"
+            />
+
+        <RadioButton
+            android:text="@string/multiplicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioMultiplicacion"
+            />
+
+        <RadioButton
+            android:text="@string/divison"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioDivision"
+            />
+
+
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/linea"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:background="#aa5f5f5f"
+        />
+
+    <EditText
+        android:id="@+id/editNumeroX"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/linea"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="X"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/textoOperador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/editNumeroX"
+        android:layout_alignTop="@id/editNumeroX"
+        android:layout_toEndOf="@id/editNumeroX"
+        android:layout_toRightOf="@id/editNumeroX"
+        android:gravity="center_vertical"
+        android:text="+"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        />
+
+    <EditText
+        android:id="@+id/editNumeroY"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textoOperador"
+        android:layout_toRightOf="@id/textoOperador"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Y"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/textoIgual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/editNumeroY"
+        android:layout_alignTop="@id/editNumeroY"
+        android:layout_toEndOf="@id/editNumeroY"
+        android:layout_toRightOf="@id/editNumeroY"
+        android:gravity="center_vertical"
+        android:text="="
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        />
+
+    <TextView
+        android:id="@+id/textoResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textoIgual"
+        android:layout_alignTop="@id/textoIgual"
+        android:layout_marginLeft="30dp"
+        android:layout_toEndOf="@id/textoIgual"
+        android:layout_toRightOf="@id/textoIgual"
+        android:gravity="center_vertical"
+        android:text="\"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        />
+    <Button
+        android:id="@+id/botonOperar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickOperar"
+        android:text="@string/botonOperar"/>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MagaKalc</string>
+    <string name="textoinformativo">Seleccione la operacion que desea realizar con 2 numeros.</string>
+
+    <string name="suma">Suma</string>
+    <string name="resta">Resta</string>
+    <string name="multiplicacion">Multiplicacion</string>
+    <string name="divison">Division</string>
+    <string name="botonOperar">Operar</string>
+</resources>

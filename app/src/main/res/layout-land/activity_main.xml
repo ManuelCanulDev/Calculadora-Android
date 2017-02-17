@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    >
+
+
+    <TextView
+        android:id="@id/textoinformacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@id/linea"
+        android:text="@string/textoinformativo"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+    <RadioGroup
+        android:id="@id/radiosOperaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/textoinformacion"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@id/linea"
+        android:baselineAligned="false">
+
+        <RadioButton
+            android:id="@+id/radioSuma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="@string/suma"/>
+
+        <RadioButton
+            android:id="@+id/radioResta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="@string/resta"/>
+
+        <RadioButton
+            android:id="@+id/radioMultiplicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="@string/multiplicacion"/>
+
+        <RadioButton
+            android:id="@+id/radioDivision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="@string/divison"/>
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/linea"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:background="#aa5f5f5f"/>
+
+    <EditText
+        android:id="@+id/editNumeroX"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@id/linea"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="x"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/textoOperador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/editNumeroX"
+        android:layout_alignTop="@id/editNumeroX"
+        android:layout_toEndOf="@id/editNumeroX"
+        android:layout_toRightOf="@id/editNumeroX"
+        android:gravity="center_vertical"
+        android:text="+"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        />
+
+    <EditText
+        android:id="@id/editNumeroY"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textoOperador"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@id/textoOperador"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Y"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/textoIgual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/editNumeroY"
+        android:layout_alignTop="@id/editNumeroY"
+        android:layout_toEndOf="@id/editNumeroY"
+        android:layout_toRightOf="@id/editNumeroY"
+        android:gravity="center_vertical"
+        android:text="="
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        />
+
+    <TextView
+        android:id="@+id/textoResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textoIgual"
+        android:layout_alignTop="@id/textoIgual"
+        android:layout_marginLeft="30dp"
+        android:layout_toEndOf="@id/textoIgual"
+        android:layout_toRightOf="@id/textoIgual"
+        android:gravity="center_vertical"
+        android:text="\?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        />
+
+    <Button
+        android:id="@+id/botonOperar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/textoOperador"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_below="@id/editNumeroX"
+        android:layout_marginTop="30dp"
+        android:onClick="onClickOperar"
+        android:text="@string/botonOperar"/>
+
+</RelativeLayout>   

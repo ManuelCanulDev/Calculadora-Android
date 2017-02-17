@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MagaKalc</string>
+    <string name="botonOperar">Calculate</string>
+    <string name="divison">Division</string>
+    <string name="multiplicacion">Multiplication</string>
+    <string name="resta">Substraccion</string>
+    <string name="suma">Addition</string>
+    <string name="textoinformativo">Select the operation of realition 2 numbers</string>
+</resources>
